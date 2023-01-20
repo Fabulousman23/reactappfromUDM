@@ -1,4 +1,6 @@
 import Expenses from "./componetns/expenses/Expenses";
+import NewExpense from "./componetns/NewExpense/NewExpense";
+
 
 const App = () => {
   const expenses = [
@@ -29,7 +31,8 @@ const App = () => {
   ];
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <h1>Prove is in the Progress!</h1>
+      <NewExpense />
       <Expenses item={expenses} />
     </div>
   );
