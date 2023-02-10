@@ -38,7 +38,7 @@ const App = () => {
     <div>
       <h1>Prove is in the Progress!</h1>
       <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses item={expenses} />
+      <Expenses items={expenses} />
     </div>
   );
 };
