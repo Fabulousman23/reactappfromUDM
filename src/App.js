@@ -1,8 +1,6 @@
+import React, { useState } from "react";
 import Expenses from "./componetns/expenses/Expenses";
 import NewExpense from "./componetns/NewExpense/NewExpense";
-import { useState } from "react";
-
-
 
 const DUMMY_EXPENSES = [
   {
@@ -30,19 +28,16 @@ const DUMMY_EXPENSES = [
     date: new Date(2021, 5, 12),
   },
 ];
-
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
-
   const addExpenseHandler = expense => {
     setExpenses(prevExpenses => {
       return [expense, ...prevExpenses];
     });
-
-  }
+  };
   return (
     <div>
-      <h1>Prove is in the Progress!</h1>
+      <h2>Let's get started!</h2>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
